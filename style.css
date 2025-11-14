@@ -66,7 +66,7 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 10px;
+  font-size: 18px;
   font-weight: bold;
   margin-right: 200px;
 }
@@ -86,7 +86,7 @@ body {
     display: flex;
     align-items: center;
     gap: 8px;
-    font-size: 10px; /* change this value as needed */
+    font-size: 18px; /* change this value as needed */
     font-weight: 700;
 }
 
@@ -107,7 +107,7 @@ body {
 }
 
 .social-icons a {
-  font-size: 20px;
+  font-size: 22px;
   text-decoration: none;
 }
 
@@ -179,7 +179,7 @@ body {
 
 .search-bar input {
   padding: 10px 15px;
-  width: 210px;
+  width: 240px;
   border-radius: 20px;
   border: 3px solid #ccc;
   font-size: 15px;
@@ -346,4 +346,3 @@ body {
     font-size: 28px;
   }
 }
-

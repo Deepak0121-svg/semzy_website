@@ -66,9 +66,9 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 18px;
-  font-weight: bold;
-  margin-right: 200px;
+  font-size: 15px;
+  font-weight: 300;
+  margin-right: 150px;
 }
 
 .contact-phone i { color: #0078d7; }
@@ -346,5 +346,6 @@ body {
     font-size: 28px;
   }
 }
+
 
 

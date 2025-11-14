@@ -128,7 +128,7 @@ body {
 .nav-center {
   display: flex;
   list-style: none;
-  gap: 55px;
+  gap: 35px;
   margin-right: 10px;
   
 }
@@ -346,4 +346,5 @@ body {
     font-size: 28px;
   }
 }
+
 

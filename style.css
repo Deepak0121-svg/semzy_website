@@ -87,7 +87,7 @@ body {
     align-items: center;
     gap: 8px;
     font-size: 18px; /* change this value as needed */
-    font-weight: 700;
+    font-weight: 400;
 }
 
 
@@ -346,6 +346,7 @@ body {
     font-size: 28px;
   }
 }
+
 
 
 

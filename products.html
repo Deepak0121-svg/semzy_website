@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SEMZY – Product Details</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+  <style>
+    body {
+      font-family: "Sora", sans-serif;
+      background: linear-gradient(to right, #f8fdff, #eaf9ff);
+      margin: 0;
+      padding: 0;
+      color: #222;
+    }
+
+    .product-header {
+      padding: 20px 40px;
+      background-color: #000080;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .product-header h1 {
+      font-size: 28px;
+      margin: 0;
+    }
+
+    .back-btn {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 10px 20px;
+      background-color: #1e1e7f;
+      border-radius: 8px;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .back-btn:hover {
+      background-color: #000066;
+      transform: translateY(-2px);
+    }
+
+    .product-details {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      padding: 40px 20px;
+    }
+
+    .product-image {
+      flex: 0 1 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .product-image img {
+      max-width: 100%;
+      max-height: 300px;
+      border-radius: 15px;
+      transition: transform 0.3s ease;
+      cursor: zoom-in;
+    }
+
+    .product-image img:hover {
+      transform: scale(1.05);
+    }
+
+    .spec-box {
+      flex: 0 1 400px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .spec-box h2 {
+      margin-bottom: 20px;
+      color: #000080;
+    }
+
+    .spec-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .spec-table th, .spec-table td {
+      border: 1px solid #ccc;
+      padding: 12px 15px;
+      text-align: left;
+      transition: background 0.3s;
+    }
+
+    .spec-table th {
+      background-color: #000080;
+      color: #fff;
+    }
+
+    .spec-table tr:hover td {
+      background-color: #f0f8ff;
+    }
+
+    @media(max-width:768px){
+      .product-details{
+        flex-direction: column;
+        align-items: center;
+      }
+      .product-image img{
+        max-height: 250px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <header class="product-header">
+    <h1>SEMZY – Electric Bike Specifications</h1>
+    <a href="index.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
+  </header>
+
+  <section class="product-details">
+
+    <div class="product-image">
+      <img src="bike.png" alt="Bike Image">
+    </div>
+
+    <div class="spec-box">
+      <h2>Model: SEMZY EV-Bike</h2>
+
+      <table class="spec-table">
+        <tr><th>Feature</th><th>Details</th></tr>
+        <tr><td>Battery</td><td>60V Lithium-ion</td></tr>
+        <tr><td>Motor Power</td><td>1500W Brushless Motor</td></tr>
+        <tr><td>Charging Time</td><td>3–4 Hours</td></tr>
+        <tr><td>Top Speed</td><td>60–70 km/h</td></tr>
+        <tr><td>Range</td><td>100 km per charge</td></tr>
+        <tr><td>Brakes</td><td>Front Disc + Rear Drum</td></tr>
+        <tr><td>Weight</td><td>85 kg</td></tr>
+      </table>
+
+    </div>
+
+  </section>
+
+</body>
+</html>

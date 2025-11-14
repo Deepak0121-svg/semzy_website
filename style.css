@@ -79,7 +79,7 @@ body {
   display: flex;
   align-items: center;
   gap: 20px;
-  margin-left: 100px;
+  margin-left: 300px;
 }
 
 .help-social-group p.help {
@@ -346,6 +346,7 @@ body {
     font-size: 28px;
   }
 }
+
 
 
 

@@ -138,10 +138,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 150px;
+  width: 120px;
   height: 45px;
   border-radius: 8px;
-  font-weight: 600;
+  font-weight: 350;
   text-decoration: none;
   text-align: center;
   transition: background 0.3s;
@@ -179,7 +179,7 @@ body {
 
 .search-bar input {
   padding: 10px 15px;
-  width: 240px;
+  width: 200px;
   border-radius: 20px;
   border: 3px solid #ccc;
   font-size: 15px;
@@ -346,3 +346,4 @@ body {
     font-size: 28px;
   }
 }
+

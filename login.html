@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login / Signup - SEMZY</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Sora', sans-serif;
+      background: linear-gradient(to right, #f8fdff, #eaf9ff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .login-container {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+      display: flex;
+      overflow: hidden;
+      max-width: 900px;
+      width: 100%;
+    }
+
+    /* Left side logo animation */
+    .login-logo {
+      background-color: #dcdcf3;
+      color: white;
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      font-size: 120px;
+      font-weight: 900;
+      letter-spacing: -20px;
+      overflow: hidden;
+    }
+
+    .login-logo span {
+      display: inline-block;
+      position: relative;
+    }
+
+    .login-logo span.s {
+      animation: slideS 2s infinite alternate ease-in-out;
+      color: #fff;
+    }
+
+    .login-logo span.z {
+      animation: slideZ 2s infinite alternate ease-in-out;
+      color: #2dcb28;
+    }
+
+    @keyframes slideS {
+      0% { transform: translateX(0) rotate(0deg); }
+      50% { transform: translateX(10px) rotate(15deg); }
+      100% { transform: translateX(0) rotate(0deg); }
+    }
+
+    @keyframes slideZ {
+      0% { transform: translateX(0) rotate(0deg); }
+      50% { transform: translateX(-10px) rotate(-15deg); }
+      100% { transform: translateX(0) rotate(0deg); }
+    }
+
+    .login-form {
+      padding: 50px 40px;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .tabs {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+
+    .tab-btn {
+      flex: 1;
+      padding: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      text-align: center;
+      border-bottom: 3px solid transparent;
+      transition: all 0.3s;
+    }
+
+    .tab-btn.active {
+      border-bottom: 3px solid #1e00ff;
+      color: #1e00ff;
+    }
+
+    .form-section {
+      display: none;
+      flex-direction: column;
+    }
+
+    .form-section.active {
+      display: flex;
+    }
+
+    .form-section label {
+      font-weight: 600;
+      margin-bottom: 5px;
+      display: block;
+    }
+
+    .form-section input {
+      width: 100%;
+      padding: 12px 15px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    .form-section button {
+      padding: 12px;
+      width: 100%;
+      background-color: #e5e5ec;
+      color: white;
+      border: none;
+      font-weight: 700;
+      font-size: 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .form-section button:hover {
+      background-color: #3e18cb;
+    }
+
+    .form-footer {
+      text-align: center;
+      margin-top: 15px;
+      color: #555;
+    }
+
+    .form-footer a {
+      color: #0078d7;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    @media (max-width: 768px) {
+      .login-logo {
+        display: none;
+      }
+      .login-form {
+        width: 100%;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="login-container">
+    <!-- Animated Logo -->
+    <div class="login-logo">
+      <span class="s">SEM</span><span class="z">ZY</span>
+    </div>
+
+    <div class="login-form">
+      <div class="tabs">
+        <div class="tab-btn active" onclick="openTab('login')">Login</div>
+        <div class="tab-btn" onclick="openTab('signup')">Signup</div>
+      </div>
+
+      <!-- Login Form -->
+      <div id="login" class="form-section active">
+        <form action="#" method="POST">
+          <label for="login-email">Email</label>
+          <input type="email" id="login-email" name="email" placeholder="Enter your email" required>
+
+          <label for="login-password">Password</label>
+          <input type="password" id="login-password" name="password" placeholder="Enter your password" required>
+
+          <button type="submit">Login</button>
+        </form>
+        <p class="form-footer">Forgot your password? <a href="#">Click here</a></p>
+      </div>
+
+      <!-- Signup Form -->
+      <div id="signup" class="form-section">
+        <form action="#" method="POST">
+          <label for="signup-name">Full Name</label>
+          <input type="text" id="signup-name" name="name" placeholder="Enter your name" required>
+
+          <label for="signup-email">Email</label>
+          <input type="email" id="signup-email" name="email" placeholder="Enter your email" required>
+
+          <label for="signup-password">Password</label>
+          <input type="password" id="signup-password" name="password" placeholder="Create a password" required>
+
+          <button type="submit">Signup</button>
+        </form>
+        <p class="form-footer">Already have an account? <a href="#" onclick="openTab('login')">Login</a></p>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    function openTab(tabName) {
+      const tabs = document.querySelectorAll('.tab-btn');
+      const forms = document.querySelectorAll('.form-section');
+
+      tabs.forEach(tab => tab.classList.remove('active'));
+      forms.forEach(form => form.classList.remove('active'));
+
+      document.querySelector(`.tab-btn[onclick="openTab('${tabName}')"]`).classList.add('active');
+      document.getElementById(tabName).classList.add('active');
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thank You - SEMZY</title>
+
+<style>
+    body {
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(to right, #e9f1ff, #f4f8ff);
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
+    }
+
+    .thank-box {
+        background: #ffffff;
+        padding: 40px 35px;
+        border-radius: 14px;
+        width: 90%;
+        max-width: 480px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        animation: fadeIn 0.8s ease-in-out;
+    }
+
+    .thank-box h1 {
+        color: #003366;
+        font-size: 28px;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    .thank-box p {
+        color: #444;
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 22px;
+    }
+
+    .back-btn {
+        display: inline-block;
+        padding: 12px 28px;
+        background: #003366;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 6px;
+        font-size: 16px;
+        transition: 0.3s;
+    }
+
+    .back-btn:hover {
+        background: #002244;
+    }
+
+    @keyframes fadeIn {
+        from {opacity: 0; transform: translateY(20px);}
+        to {opacity: 1; transform: translateY(0);}
+    }
+</style>
+
+</head>
+<body>
+
+<div class="thank-box">
+    <h1>Application Submitted Successfully</h1>
+    <p>
+        Thank you for applying for an internship at <strong>SEMZY</strong>.  
+        Your application has been received and our team will review it shortly.
+    </p>
+    <a class="back-btn" href="index.html">Back to Home</a>
+</div>
+
+</body>
+</html>
